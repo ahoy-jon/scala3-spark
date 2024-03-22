@@ -16,6 +16,7 @@ case object KeyValueGroupedDatasetTemplate extends Template.Default {
     Some {
       """import org.apache.spark.sql.streaming.{GroupState, GroupStateTimeout, OutputMode}
         |import org.apache.spark.sql.{
+        |  Column,
         |  Encoder, 
         |  TypedColumn, 
         |  Dataset => UnderlyingDataset, 

@@ -139,7 +139,7 @@ final case class DataFrameReader[State <: SchemaState] private[sql] (
     import zio.spark.sql.implicits._
     import scala3encoders.given // scalafix:ok
 
-    text(path: _*).map(_.select("value").as[String])
+    text(path*).map(_.select("value").as[String])
   }
 
   /**
